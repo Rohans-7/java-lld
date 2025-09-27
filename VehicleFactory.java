@@ -20,12 +20,26 @@ class Truck implements Vehicle{
     }
 }
 
-public class Main
-{
-	public static void main(String[] args) {
-		Truck tata = new Truck();
-		tata.start();
-		tata.stop();
-		tata.type();
-	}
+class Car implements Vehicle{
+    public void start(){
+        System.out.println("Starting the Car");
+    }
+    public void stop(){
+        System.out.println("Stop the Car");
+    }
+    public void type(){
+        System.out.println("This is tata Car");
+    }
+}
+
+public class VehicleFactory{
+    public static Vehicle getVehicle(String s){
+        if(s.equals("Car")){
+            return new Truck();
+        }
+        else if(s.equals("Truck")){
+            return new Truck();
+        }
+        return new Truck();
+    }
 }

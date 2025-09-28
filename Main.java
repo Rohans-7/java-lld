@@ -4,11 +4,13 @@ public class Main
 		// Vehicle tata = VehicleFactory.getVehicle("Car");
         // tata.start();
         // tata.stop();
-		Car.CarBuilder builder = new Car.CarBuilder();
-		Car car1 = builder.setEngine("V8")
-						  .setWheels(4)
-						  .setSeats(4).build();
+		// Car.CarBuilder builder = new Car.CarBuilder();
+		// Car car1 = builder.setEngine("V8")
+		// 				  .setWheels(4)
+		// 				  .setSeats(4).build();
 
-		System.out.println(car1);
+		// System.out.println(car1);
+		Logger logger = Logger.getInstance();
+		logger.log("Application started");
 	}
 }
